@@ -103,7 +103,7 @@ const Section = styled.section`
           text-align: center;
           color: black;
           &[type="date"] {
-            padding-left: 3rem;
+            padding-left: 1rem;
           }
           &::placeholder {
             color: black;
