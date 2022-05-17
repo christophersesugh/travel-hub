@@ -69,7 +69,7 @@ const Section = styled.section`
     align-items: center;
     gap: 1rem;
     .title {
-      color: white;
+      color: ${(props) => props.theme.primaryColor};
       h1 {
         font-size: 3rem;
         letter-spacing: 0.2rem;
@@ -116,7 +116,7 @@ const Section = styled.section`
       button {
         cursor: pointer;
         padding: 1rem;
-        border-radius: 0.3rem;
+        border-radius: ${(props) => props.theme.borderRadius1};
         background-color: #4361ee;
         color: white;
         font-size: 1.1rem;

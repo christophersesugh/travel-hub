@@ -73,7 +73,7 @@ const Nav = styled.nav`
   button {
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 0.5rem;
+    border-radius: ${(props) => props.theme.borderRadius2};
     border: none;
     color: white;
     background-color: #48cae4;

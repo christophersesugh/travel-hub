@@ -23,6 +23,8 @@ a {
   text-decoration: none;
 }
 
+/*:::: scrollbar ::::*/
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
