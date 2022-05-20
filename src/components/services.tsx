@@ -5,8 +5,8 @@ import styled from "styled-components";
 export default function Services() {
   return (
     <Section>
-      {services.map((service) => (
-        <div className="service">
+      {services.map((service, index) => (
+        <div className="service" key={index}>
           <div className="icon">
             <img src={service.icon} alt={service.title} />
           </div>
