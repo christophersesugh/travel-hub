@@ -5,14 +5,6 @@ import destination4 from "assets/Destination4.png";
 import destination5 from "assets/Destination5.png";
 import destination6 from "assets/Destination6.png";
 
-interface Recommend {
-  image: any;
-  title: string;
-  subtitle: string;
-  cost: string;
-  duration: string;
-}
-
 export const recommend = [
   {
     imgage: destination1,
