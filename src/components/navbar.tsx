@@ -4,40 +4,68 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import logo from "assets/logo.png";
 
+const menuItems = [
+  {
+    name: "Home",
+    link: "#home",
+  },
+  {
+    name: "Services",
+    link: "#services",
+  },
+  {
+    name: "Recommend",
+    link: "#recommend",
+  },
+  {
+    name: "Testimonials",
+    link: "#testimonials",
+  },
+];
+
 export default function Navbar() {
   const [closeNavbar, setCloseNavbar] = React.useState(false);
 
   return (
-    <Nav>
-      <div className="brand">
-        <div className="container">
-          <img src={logo} alt="logo" />
-          Travel Hub
+    <>
+      <Nav>
+        <div className="brand">
+          <div className="container">
+            <img src={logo} alt="logo" />
+            Travel Hub
+          </div>
+          <div className="toggle">
+            {closeNavbar ? (
+              <VscChromeClose onClick={() => setCloseNavbar(false)} />
+            ) : (
+              <GiHamburgerMenu onClick={() => setCloseNavbar(true)} />
+            )}
+          </div>
         </div>
-        <div className="toggle">
-          {closeNavbar ? (
-            <VscChromeClose onClick={() => setCloseNavbar(true)} />
-          ) : (
-            <GiHamburgerMenu onClick={() => setCloseNavbar(false)} />
-          )}
-        </div>
-      </div>
-      <ul className="ul">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#recommend">Places</a>
-        </li>
-        <li>
-          <a href="#testimonials">Testimonials</a>
-        </li>
-      </ul>
-      <button>Connect</button>
-    </Nav>
+        <ul className="ul">
+          {menuItems.map((menuItem) => (
+            <li key={menuItem.link}>
+              <a href={menuItem.link}>{menuItem.name}</a>
+            </li>
+          ))}
+        </ul>
+
+        <button>Connect</button>
+      </Nav>
+      {closeNavbar ? (
+        <ResponsiveNav>
+          <ul className="ul">
+            {menuItems.map((menuItem) => (
+              <li key={menuItem.link}>
+                <a href={menuItem.link} onClick={() => setCloseNavbar(false)}>
+                  {menuItem.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </ResponsiveNav>
+      ) : null}
+    </>
   );
 }
 
@@ -109,6 +137,23 @@ const Nav = styled.nav`
     transition: 0.3s ease-in-out;
     &:hover {
       background-color: #023e8a;
+    }
+  }
+`;
+
+const ResponsiveNav = styled.nav`
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  background-color: white;
+  width: 100vw;
+  overflow: hidden;
+  ul {
+    width: 100%;
+    li {
+      width: 100%;
+      margin: 1rem 0;
+      margin-left: 2rem;
     }
   }
 `;
