@@ -10,9 +10,9 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
           Travel Hub
         </div>
-        <div className="toggle"></div>
+        <div className="toggle">T</div>
       </div>
-      <ul>
+      <ul className="ul">
         <li>
           <a href="#home">Home</a>
         </li>
@@ -47,6 +47,21 @@ const Nav = styled.nav`
       text-transform: uppercase;
     }
     .toggle {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .toggle {
+        display: block;
+      }
+    }
+    button,
+    .ul {
       display: none;
     }
   }

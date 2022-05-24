@@ -129,4 +129,27 @@ const Section = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 280px) and (max-width: 980px) {
+    height: 25rem;
+    .background {
+      height: 100%;
+    }
+    .content {
+      .title {
+        h1 {
+          font-size: 1rem;
+        }
+        p {
+          padding: 1vw;
+          font-size: 0.8rem;
+        }
+      }
+      .search {
+        flex-direction: column;
+        padding: 0.8rem;
+        gap: 0.8rem;
+      }
+    }
+  }
 `;
