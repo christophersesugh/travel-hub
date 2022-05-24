@@ -41,4 +41,10 @@ const Section = styled.section`
       }
     }
   }
+  @media screen and (min-width: 280px) and (max-width: 720px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  @media screen and (min-width: 720px) and (max-width: 1080px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

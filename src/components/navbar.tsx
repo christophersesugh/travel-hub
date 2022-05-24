@@ -1,8 +1,12 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { VscChromeClose } from "react-icons/vsc";
 import logo from "assets/logo.png";
 
 export default function Navbar() {
+  const [closeNavbar, setCloseNavbar] = React.useState(false);
+
   return (
     <Nav>
       <div className="brand">
@@ -10,7 +14,13 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
           Travel Hub
         </div>
-        <div className="toggle">T</div>
+        <div className="toggle">
+          {closeNavbar ? (
+            <VscChromeClose onClick={() => setCloseNavbar(true)} />
+          ) : (
+            <GiHamburgerMenu onClick={() => setCloseNavbar(false)} />
+          )}
+        </div>
       </div>
       <ul className="ul">
         <li>
@@ -58,6 +68,7 @@ const Nav = styled.nav`
       width: 100%;
       .toggle {
         display: block;
+        cursor: pointer;
       }
     }
     button,

@@ -1,5 +1,4 @@
 import React from "react";
-import avatar from "assets/avatar.jpg";
 import { testimonials } from "constants/testimonials";
 import styled from "styled-components";
 
@@ -62,6 +61,20 @@ const Section = styled.section`
           span {
             font-size: 0.9rem;
           }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 768px) {
+    .testimonials {
+      flex-direction: column;
+      margin: 0;
+      .testimonial {
+        justify-content: center;
+        text-align: center;
+        .info {
+          flex-direction: column;
+          justify-content: center;
         }
       }
     }
