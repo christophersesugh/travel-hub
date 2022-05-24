@@ -149,6 +149,16 @@ const Section = styled.section`
         flex-direction: column;
         padding: 0.8rem;
         gap: 0.8rem;
+        .container {
+          padding: 0 0.8rem;
+          input[type="date"] {
+            padding-left: 1rem;
+          }
+        }
+        .button {
+          padding: 1rem;
+          font-size: 1rem;
+        }
       }
     }
   }
