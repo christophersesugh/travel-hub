@@ -133,7 +133,9 @@ const Section = styled.section`
   @media screen and (min-width: 280px) and (max-width: 980px) {
     height: 25rem;
     .background {
-      height: 100%;
+      img {
+        height: 100%;
+      }
     }
     .content {
       .title {
@@ -145,7 +147,7 @@ const Section = styled.section`
           font-size: 0.8rem;
         }
       }
-      .search {
+      .search-form {
         flex-direction: column;
         padding: 0.8rem;
         gap: 0.8rem;
