@@ -1,5 +1,16 @@
-import React from "react";
+import * as React from "react";
+import logo from "assets/logo.png";
+import styled from "styled-components";
 
 export default function ScrollToTop() {
-  return <div>scroll-to-top</div>;
+  const [scroll, setScroll] = React.useState(false)
+  return (
+    <ToTop>
+      <img src={logo} alt="logo" />
+    </ToTop>
+  );
 }
+
+const ToTop = styled.div`
+
+`;

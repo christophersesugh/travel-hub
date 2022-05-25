@@ -34,7 +34,7 @@ export default function Hero() {
             <input type="date" id="check-in" />
           </div>
           <div className="container">
-            <label htmlFor="search-form">Check out</label>
+            <label htmlFor="check-out">Check out</label>
             <input type="date" id="check-out" />
           </div>
           <button type="submit">explore now</button>

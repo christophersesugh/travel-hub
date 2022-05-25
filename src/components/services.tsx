@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function Services() {
   return (
-    <Section>
+    <Section id="services">
       {services.map((service, index) => (
         <div className="service" key={index}>
           <div className="icon">

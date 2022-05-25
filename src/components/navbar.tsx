@@ -49,7 +49,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
         <button>Connect</button>
       </Nav>
       {closeNavbar ? (
@@ -146,14 +145,24 @@ const ResponsiveNav = styled.nav`
   position: absolute;
   z-index: 999;
   background-color: white;
-  width: 100vw;
+  width: 100%;
+  height: auto;
   overflow: hidden;
+  transition: 0.2s all linear;
   ul {
     width: 100%;
     li {
       width: 100%;
       margin: 1rem 0;
       margin-left: 2rem;
+      a {
+        color: #0077b6;
+        font-size: 1.2rem;
+        transition: 0.2s all linear;
+        &:hover {
+          color: #023e8a;
+        }
+      }
     }
   }
 `;

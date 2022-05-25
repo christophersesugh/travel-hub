@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function Testimonial() {
   return (
-    <Section>
+    <Section id="testimonials">
       <div className="title">
         <h2>Happy Customers</h2>
       </div>
